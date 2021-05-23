@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Quiz</title>
+    <link href="Develop/style.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <!-- Header h1 and h2 will remain visible througout.  h3 will be hidden once the quiz starts -->
+    <header>
+
+        <h1>JavaScript Quiz</h1>
+        <h2 class="subtitle">Test Your Knowledge</h2>
+        <h3 class="h3subtitle">Are you ready?</h3>
+
+    </header>
+
+
+    <!-- This is the area where the questions will appear.  They will be populated using a JavaScript array and the append method -->
+    <div class="quizcontainer hide">
+
+        <!-- The following is where the questions and answers will be placed from the JavaScript function quizquestions().  Class hide or show will control when the question appears -->
+        <div id="question-container">
+          <div id="question">Question</div>
+
+          <div id="answer-buttons" class="btn-grid">
+            <button id="btn1" class="ansbtn">Answer 1</button>
+            <button id="btn2" class="ansbtn">Answer 2</button>
+            <button id="btn3" class="ansbtn">Answer 3</button>
+        </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- The following is a placeholder for the top 5 scores  Class hide will control when they appear on the page -->
+    <div class="highscorecontainer hide">
+        <div>
+            <ol> <!-- High Score Names -->
+                <li id="name_0"></li>
+                <li id="name_1"></li>
+                <li id="name_2"></li>
+                <li id="name_3"></li>
+                <li id="name_4"></li>
+            </ol>
+        </div>
+
+        <div>
+            <ul><!-- High Scores -->
+                <li id="score_0"></li>
+                <li id="score_1"></li>
+                <li id="score_2"></li>
+                <li id="score_3"></li>
+                <li id="score_4"></li>
+            </ul>
+        </div>
+
+    </div>
+    
+
+    <!-- Class hide will control when each button appears on the page -->
+    <footer>
+
+        <!-- Instructions are only visible at the beginning of the quiz -->
+        <p class="instructions">You will have 30 seconds to answer 5 different multiple choice questions.<br><br>Correct answers will add 5 seconds to the clock.  Incorrect answers will delete 5 seconds from the clock.<br><br>After you answer the questions, you will be asked to enter your initials.  The top 5 scores will be stored in local storage.<br><br>Then, after you enter your initials (or if time has run out) you will be asked if you want to play again.</p> 
+
+        <!-- Begin Quiz button is only visible at the beginning of the quiz -->
+        <button class="ftrbtn show" id="start">Begin Quiz</button>
+
+        <!-- Play Again button is only visible once the quiz has been taken -->
+        <button class="ftrbtn hide" id="playagain">Play Again</button>
+    
+    </footer>
+
+</body>
+
+    <!-- variables.js is used for global variables that are used by both timer.js and script.js -->
+    <script src="Develop/variables.js"></script>
+
+    <!-- timer.js contains the timer function -->
+    <script src="Develop/timer.js"></script>
+
+    <script src="Develop/script.js"></script>
+
+</html>
+
+
+<!-- Last Revised 5/23/21-->
+<!-- Raemarie Oatman raemarie.oatman@gmail.com -->
+<!-- Homework Week 4 - 05 Third-Party APIs: Work Day Scheduler-->
