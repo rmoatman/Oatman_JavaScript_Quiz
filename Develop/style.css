@@ -1,0 +1,151 @@
+/* Variables for colors and font-family used */
+:root {
+    --blue-color: rgb(12, 67, 100);
+    --ltblue-color: rgb(29, 122, 180);
+    --font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+/* Styles the window */
+* {
+    box-sizing: border-box;
+    padding: 20;
+    margin: 0;
+}
+
+/* Styles the body.  This contains the quiz question and the high score containers */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--ltblue-color);
+    justify-content: center;
+}
+
+/* HEADER */
+/* Styles the header.  This contains the h1, h2, and h3 elements */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+   margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+
+/* Styles the footer.  This contains the instructions p and the Begin Quiz, Next, and Play Again buttons */
+footer {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-top: 30px;      
+}
+
+
+/* Styles the container which holds the quiz */
+.quizcontainer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    min-width: 80%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/* Styles the answer buttons */
+.ansbtn {
+    background-color: var(--blue-color);
+    color: white;
+    min-width: 100%;
+    min-height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: larger;
+}
+
+/* Styles the answer button when user hovers over them */
+.ansbtn:hover {
+    color:red;
+}
+
+/* Styles the question text */
+#question {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size:larger;
+}
+
+/* Styles the container that holds the high scores.  This contains one column of names and one column of corresponding scores */
+.highscorecontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    min-width: 25%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
+    font-family: var(--font);
+    font-size:x-large;
+}
+
+/* Removes the bullet from the ul that contains the scores */
+.highscorecontainer ul {
+    list-style-type: none;
+}
+
+/* This element is used to display the word "High Score" */
+.h3subtitle {
+    font-size: 40px;
+    color: var(--blue-color);
+}
+
+/* This styles the name of the user in number 1 position */
+#name_0 {
+    color: red;
+}
+
+/* This styles the name of the user's score in number 1 position */
+#score_0 {
+    color: red;
+}
+
+/* This class is used at various times to hide various elements */
+.hide {
+    display: none;
+}
+
+/* This styles the instructions to the game which are stored in the footer */
+footer p {
+    font-family: var(--font);
+    background-color: white;
+    min-width: 80%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 30px;
+    font-size: 14pt;
+    text-align: justify;
+}
+
+/* This styles the "Begin Quiz" and "Play Again" buttons in the footer */
+.ftrbtn {
+    font-size: 14pt;
+    border-radius: 5px;
+}
+
+/* Last Revised 5/22/21 */
+/* Raemarie Oatman raemarie.oatman@gmail.com */
+/* Homework Week 4 - 05 Third-Party APIs: Work Day Scheduler */
